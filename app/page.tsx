@@ -9,6 +9,9 @@ import { Badge } from "@/components/ui/badge"
 import { useCart } from "@/contexts/cart-context"
 import { useLanguage } from "@/contexts/language-context"
 import Link from "next/link"
+import Spline from "@splinetool/react-spline";
+
+
 
 export default function HomePage() {
   const { language, toggleLanguage, t } = useLanguage()
@@ -100,6 +103,7 @@ export default function HomePage() {
               </div>
             </Link>
 
+
             {/* Search Bar - Hidden on mobile */}
             <div className="hidden md:flex flex-1 max-w-md mx-8">
               <div className="relative w-full">
@@ -178,6 +182,13 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Spline Viewer Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <Spline scene="https://prod.spline.design/4dJ4PXYPas5yIkm6/scene.splinecode" />
+          </div>
+          </section>
 
       {/* Popular Categories */}
       <section className="py-16">
